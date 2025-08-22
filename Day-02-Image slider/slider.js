@@ -1,5 +1,5 @@
 const img = document.querySelectorAll(".slider img");
-const btn = document.querySelector(".btn1");
+const btn = document.querySelector(".btn");
 let i = 0;
 btn.addEventListener("click",() => {        
       img[i].style.display = "none";

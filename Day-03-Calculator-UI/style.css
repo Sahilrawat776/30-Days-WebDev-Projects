@@ -2,12 +2,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blueviolet;
+    background-color: #1e1e2f;
 }
 .main-container{
-    min-height: 80vh;
+    min-height: fit-content;
     max-width: 20vw;
-    background-color: black;
+    background-color: #2a2a40;
     display: flex;
     color: white;
     text-align: center;
@@ -24,7 +24,7 @@ body{
 .buttons{
     width: 60px;
     height: 60px;
-    background-color: white;
+    background-color: #3a3a55;
      border-radius: 50%;
     margin: 4px;
     text-align: center;
@@ -32,24 +32,26 @@ body{
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    color: rgb(56, 54, 54);
+    color: white;
 }
 .operators{
-    background-color: green;
+    background-color: #00ff88;
     color: white;
 }
 .clear{
-    background-color: rgb(97, 75, 47);
+    background-color: #ffcc00;
     color: white;
 }
 .buttons:hover{
-    background-color: rgb(189, 200, 210);  
+    background-color: #3a3a3a;  
 }
 .operators:hover{
     background-color: rgb(49, 193, 49);
+    box-shadow: 0 0 10px #00ffcc
 }
 .clear:hover{
-    background-color: rgb(123, 101, 72);
+    background-color: rgb(215, 219, 92);
+    box-shadow: 0 0 10px #ff4444;
 }
 .input{
     display: flex;
@@ -60,4 +62,28 @@ body{
 input{
     height: 150px;
     width: 90%;
+}
+@media screen and (max-width: 1300px) {
+    .main-container { 
+          min-height: fit-content;
+          max-width: 25vw;
+    }
+}
+@media screen and (max-width: 600px) {
+    .main-container { 
+          min-height: fit-content;
+          max-width: 80vw;
+    }
+}
+@media screen and (max-width: 450px) {
+    .main-container { 
+          min-height: fit-content;
+          max-width: 100vw;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .main-container {
+        min-height: fit-content;
+        max-width: 30vw;
+    }
 }
