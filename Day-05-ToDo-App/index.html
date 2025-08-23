@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mx-auto flex items-center justify-center bg-blue-300 py-12">
+        <form class="bg-white p-6 mx-auto  rounded-lg shadow-md flex-col gap-2 w-full max-w-md" action="">
+            <input class="flex-1 border  ctm-width border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-focus:ring-blue-400" type="text" placeholder="Add task">
+            <button class="bg-blue-400 text-white px-4 py-2 rounded hover:bg-green-500 transition" type="submit">+</button>
+            <div id="task-list"></div>
+        </form>
+       
+    </div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form');
+    const input = form.querySelector('input[type="text"]');
+    const container = document.querySelector('.container');
+    const taskList = document.getElementById('task-list');
+
+ 
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const taskText = input.value.trim();
+      if (taskText === '') return;
+
+      // Create checkbox
+      const checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.id = `task-${Date.now()}`;
+
+      // Create label
+      const label = document.createElement('label');
+      label.htmlFor = checkbox.id;
+      label.textContent = taskText;
+      label.className = 'ml-2 ctm-width';
+       
+
+
+      // Wrap in a div for layout
+      const taskItem = document.createElement('div');
+      taskItem.className = 'flex items-center gap-2 mt-2 mx-auto ';
+      taskItem.appendChild(checkbox);
+      taskItem.appendChild(label);
+
+      const rmvBtn = document.createElement('button');
+      rmvBtn.className = 'bg-blue-400 text-white px-4 py-2 rounded hover:bg-green-500 transition';
+      rmvBtn.textContent = 'x';
+      taskItem.appendChild(rmvBtn);
+
+      rmvBtn.addEventListener('click', function(){
+          rmvBtn.remove();
+          label.remove();
+          checkbox.remove();
+          
+
+      });
+
+      // Append to container
+      taskList.appendChild(taskItem);
+       
+      // Clear input
+      input.value = '';
+    });
+  });
+</script>
+
+</body>
+</html>
+</body>
+</html>
