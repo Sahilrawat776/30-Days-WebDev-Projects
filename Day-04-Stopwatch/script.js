@@ -8,7 +8,6 @@ let pauseBtn = document.querySelector(".pause");
 let resetBtn = document.querySelector(".reset");
 let lapBtn = document.querySelector(".lap");
 let laps = document.getElementById("laps");
-let container = document.getElementsByClassName("container");
 
 let h = 0,
   m = 0,
@@ -27,19 +26,47 @@ function show() {
   fs.textContent = pad(f);
 }
 
-function tick(){
-     if(f==100){
-      f = 0;
-      s++;
-     }
-     if(s==60){
-      s = 0;
-      m++;
-     }
-     if(m==60){
-      m = 0;
-      h++;
-     }
-
-    show();
+function tick() {
+  f++;
+  if (f == 100) {
+    f = 0;
+    s++;
+  }
+  if (s == 60) {
+    s = 0;
+    m++;
+  }
+  if (m == 60) {
+    m = 0;
+    h++;
+  }
+  show();
 }
+
+startBtn.onclick = () => {
+  if (!running) {
+    timer = setInterval(tick, 10);
+    running = true;
+  }
+};
+pauseBtn.onclick = () => {
+  clearInterval(timer);
+  running = false;
+};
+resetBtn.onclick = () => {
+  clearInterval(timer);
+  running = false;
+  h = m = s = f = 0;
+  show();
+  laps.innerHTML = "";
+};
+
+// lap
+lapBtn.onclick = () => {
+  if (!running) return;
+  let li = document.createElement("li");
+  li.textContent = `${pad(h)}:${pad(m)}:${pad(s)}:${pad(f)}`;
+  laps.appendChild(li);
+};
+
+show();
