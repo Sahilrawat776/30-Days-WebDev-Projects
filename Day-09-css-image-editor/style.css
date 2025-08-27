@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+}
+
+:root{
+    --padding:10px;
+    --blur:0px;
+    --base:rgb(255,0,0);
+    --width:60%;
+    --border-radius:5px;
+
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+}
+img{
+    height: 70h;
+    width: var(--width);
+    margin:1rem;
+    padding: var(--padding);
+    filter :blur(var(--blur));
+   border-radius: var(--border-radius);
+   background-color:var(--base);
+
+}

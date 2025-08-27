@@ -4,9 +4,9 @@
 }
 body{
      background-image: url("images/1.webp");
-     background-image: contain;
-  background-repeat: no-repeat;
-    background-size: 100% 60%;
+     background-image: cover;
+     background-repeat: no-repeat;
+     background-size: 100% 50%;
 }
 nav{
     font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -23,7 +23,6 @@ nav{
     color: white;
     border: none;
     font-size: 1.3rem;
-    font-weight: 50;
     border-radius: 15px;
     text-align: center;
     margin-left: 20px;
@@ -33,7 +32,7 @@ a{
     margin-right: 20px;
     margin-left: 20px;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 500;
     
 }
@@ -46,7 +45,7 @@ a{
     padding: 15px;
     border-radius: 25px;
     margin-right: 20px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
     text-align: center;
 }
@@ -55,10 +54,10 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 70vh;
-    max-height: 60vh;
-    max-width: 100vw;
+    height: 100vh;
+    max-height: auto;
     background-color: white;
+    max-width: 100vw;
     margin-top: 350px;
     text-align: center;
     opacity: 1;
@@ -70,7 +69,7 @@ a{
 }
 
  .first::after {
-  content: "";
+
   position: absolute;
   top: 0;
   left: 0;
@@ -129,8 +128,105 @@ a{
 }
 
 .middle-section2{
-    margin-top: 100px;
+    margin-top: 50px;
 }
 a:hover{
     text-decoration: underline white;
+}
+
+.first-sub{
+    display: flex;
+    list-style-type: none;
+}
+.middle-section2-sub{
+    font-size: 2rem;
+    color: rgb(26, 62, 111);
+    margin-bottom: 20px;
+}
+.section-3{
+    height: 250px;
+    width: 200px;
+    max-width: 200px;
+    margin-top: 20px;
+    font-family: "Avenir Next";
+}
+.section-3-btn{
+    border: none;
+    background: none;
+    color: rgb(20, 18, 18);
+}
+.section-3-sub-heading{
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Learn{
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: black;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 0.7rem;
+}
+.section-3-sub-text{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.section-3-sub-heading:hover{
+    color: rgb(26, 62, 111);
+}
+
+/* section second */
+.second-sub-img{
+    height: fit-content;
+    max-width: 100%;
+}
+
+/* third section */
+
+.third{
+
+    height: 100vh;
+    max-height: auto;
+    background-color: white;
+    max-width: 100vw;
+    margin-top: 350px;
+    text-align: center;
+    opacity: 1;
+    border: none;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    box-shadow: 0 0 80px 80px white;
+}
+
+ .third::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 80px 40px white inset; /* creates fog inside edges */
+  pointer-events: none; /* don’t block clicks */
+  z-index: 2;
+}
+
+
+
+@media only screen and (max-width: 1250px) {
+    .nav-option-1{
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .nav-option-2{
+        visibility: hidden;
+        font-size: smaller;
+        padding: 45px 45px ;
+        overflow: hidden;
+    }
 }
