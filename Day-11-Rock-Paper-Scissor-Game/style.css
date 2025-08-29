@@ -1,0 +1,110 @@
+/* 🌟 Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 700px;
+}
+
+
+.button {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  width: 120px;   
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #333;
+  overflow: hidden;
+  padding: 0;
+  margin: 10px;
+  background: white;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
+
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.scores span {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  min-width: 120px;
+}
+
+.scores h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #ffdf6b;
+}
+
+.scores h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+
+.draw {
+  margin-top: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #00e6e6;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 0.6rem 1.5rem;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+
+
+
