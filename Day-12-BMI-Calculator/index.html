@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>BMI Calculator</h1>
+    <h2>Metric Unit</h2>
+
+    <!-- BMI Form -->
+    <form action="" method="post" class="sub-container" id="bmi-form">
+      
+      <!-- Age -->
+      <label for="age" class="form-label">
+        Age
+        <input type="number" id="age" name="age" 
+               placeholder="Enter Age"
+               min="2" max="120" step="1" required>
+        <span class="hint">Allowed: 2 - 120</span>
+      </label>
+
+      <!-- Gender -->
+      <fieldset>
+        <legend>Gender</legend>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label>
+      </fieldset>
+
+      <!-- Height -->
+      <label for="height" class="form-label">
+        Height (cm)
+        <input type="number" id="height" name="height" 
+               min="50" max="300" step="0.1" required>
+      </label>
+
+      <!-- Weight -->
+      <label for="weight" class="form-label">
+        Weight (kg)
+        <input type="number" id="weight" name="weight" 
+               min="2" max="500" step="0.1" required>
+      </label>
+
+      <!-- Button -->
+      <button id="calculate" type="submit" aria-label="Calculate your Body Mass Index">
+        Calculate
+      </button>
+    </form>
+
+    <!-- BMI Results -->
+    <section class="BMI" aria-live="polite" aria-atomic="true">
+      <div id="MyBMI" role="status"></div>
+      <div id="Category" role="status"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
