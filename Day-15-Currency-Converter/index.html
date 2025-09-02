@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Simple currency converter tool" />
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="currency-converter">
+    <h1>Currency Converter</h1>
+    
+    <form id="converter-form">
+      <!-- Amount Input -->
+      <div class="form-group">
+        <label for="amount">Amount</label>
+        <input 
+          type="number" 
+          id="amount" 
+          name="amount" 
+          placeholder="0" 
+          min="0" 
+          required 
+        />
+      </div>
+
+      <!-- From Currency -->
+      <div class="form-group">
+        <label for="currency1">From:</label>
+        <select id="currency1" name="currency1" aria-label="Select source currency"></select>
+      </div>
+
+      <!-- To Currency -->
+      <div class="form-group">
+        <label for="currency2">To:</label>
+        <select id="currency2" name="currency2" aria-label="Select target currency"></select>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="form-group">
+        <button type="submit">Convert</button>
+      </div>
+    </form>
+
+    <!-- Result Output -->
+    <section id="result" aria-live="polite"></section>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
