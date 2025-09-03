@@ -1,0 +1,72 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #333;
+}
+
+.password-generator {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.form-group {
+  margin: 1rem 0;
+  text-align: left;
+}
+
+input[type="number"] {
+  width: 80px;
+  padding: 0.3rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+label {
+  display: block;
+  margin: 0.3rem 0;
+}
+
+button {
+  background: #4facfe;
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #00c6ff;
+}
+
+#result {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: 1px dashed #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+#password-output {
+  font-family: monospace;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  word-break: break-all;
+}

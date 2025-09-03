@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Password Generator Tool - Create strong and secure passwords">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="password-generator">
+    <h1>🔑 Password Generator</h1>
+
+    <form id="password-form">
+      <!-- Password Length -->
+      <div class="form-group">
+        <label for="length">Password Length:</label>
+        <input type="number" id="length" min="4" max="32" value="12">
+      </div>
+
+      <!-- Options -->
+      <div class="form-group">
+        <label><input type="checkbox" id="include-numbers" checked> Include Numbers</label>
+        <label><input type="checkbox" id="include-symbols" checked> Include Symbols</label>
+        <label><input type="checkbox" id="include-lowercase" checked> Include Lowercase</label>
+        <label><input type="checkbox" id="include-uppercase" checked> Include Uppercase</label>
+      </div>
+
+      <!-- Generate Button -->
+      <div class="form-group">
+        <button type="submit">Generate Password</button>
+      </div>
+    </form>
+
+    <!-- Result -->
+    <section id="result">
+      <p id="password-output">Your secure password will appear here.</p>
+      <button id="copy-btn">📋 Copy</button>
+    </section>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
