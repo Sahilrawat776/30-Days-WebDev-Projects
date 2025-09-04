@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>🍲 Recipe Finder</h1>
+
+    <form id="search-form">
+      <input type="text" id="query" placeholder="Search recipe by name..." required>
+      <button type="submit">Search</button>
+    </form>
+
+    <section id="status" aria-live="polite"></section>
+    <section id="results" class="results"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
