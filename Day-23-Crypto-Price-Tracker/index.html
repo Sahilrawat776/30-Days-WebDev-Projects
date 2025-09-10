@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Price Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>💰 Crypto Price Tracker</h1>
+
+    <div class="selector">
+      <label for="crypto">Select Cryptocurrency:</label>
+      <select id="crypto">
+        <option value="bitcoin">Bitcoin (BTC)</option>
+        <option value="ethereum">Ethereum (ETH)</option>
+        <option value="dogecoin">Dogecoin (DOGE)</option>
+        <option value="litecoin">Litecoin (LTC)</option>
+        <option value="ripple">Ripple (XRP)</option>
+      </select>
+      <button id="getPrice">Get Price</button>
+    </div>
+
+    <div class="result">
+      <h2 id="cryptoName">-</h2>
+      <p id="price">Price: ₹ --</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
