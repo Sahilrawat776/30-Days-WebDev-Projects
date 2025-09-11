@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Typing Speed Tester</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Typing Speed Tester</h1>
+
+    <section class="card">
+      <div class="meta">
+        <div>Time: <span id="timer">0.0</span>s</div>
+        <div>WPM: <span id="wpm">0</span></div>
+        <div>Accuracy: <span id="accuracy">100</span>%</div>
+      </div>
+
+      <div id="text-display" class="text-display"></div>
+
+      <textarea id="input" placeholder="Start typing here..." spellcheck="false" autocomplete="off"></textarea>
+
+      <div class="controls">
+        <button id="start">Start</button>
+        <button id="restart">Restart</button>
+        <div class="best">Best WPM: <span id="best">0</span></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
