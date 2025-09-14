@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopSmart 🛒</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>ShopSmart 🛒</h1>
+    <div class="cart-info">
+      <span>Cart Items: <span id="cart-count">0</span></span>
+      <span>Total: ₹<span id="cart-total">0</span></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="products">
+      <div class="product" data-id="1" data-price="500">
+        <h3>Wireless Headphones 🎧</h3>
+        <p>₹500</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <div class="product" data-id="2" data-price="1000">
+        <h3>Smart Watch ⌚</h3>
+        <p>₹1000</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <div class="product" data-id="3" data-price="1500">
+        <h3>Bluetooth Speaker 🔊</h3>
+        <p>₹1500</p>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+    </section>
+
+    <section class="cart">
+      <h2>Your Cart</h2>
+      <ul id="cart-list"></ul>
+      <button id="clear-cart">Clear Cart</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
