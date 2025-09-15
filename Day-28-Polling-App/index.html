@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polling App 📊</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📊 Polling App</h1>
+    <p>Vote for your favorite option:</p>
+
+    <div class="buttons">
+      <button onclick="vote('A')">Option A</button>
+      <button onclick="vote('B')">Option B</button>
+      <button onclick="vote('C')">Option C</button>
+    </div>
+
+    <h2>Results:</h2>
+    <div class="results">
+      <div class="bar">
+        <span>Option A</span>
+        <div class="progress"><div id="barA"></div></div>
+        <span id="countA">0</span>
+      </div>
+      <div class="bar">
+        <span>Option B</span>
+        <div class="progress"><div id="barB"></div></div>
+        <span id="countB">0</span>
+      </div>
+      <div class="bar">
+        <span>Option C</span>
+        <div class="progress"><div id="barC"></div></div>
+        <span id="countC">0</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="style.js"></script>
+</body>
+</html>
