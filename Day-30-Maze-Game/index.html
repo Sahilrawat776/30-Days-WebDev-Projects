@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Maze Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <h1>Maze Game</h1>
+
+    <div class="controls-top">
+      <label>
+        Rows:
+        <input id="rowsInput" type="number" min="5" max="41" step="2" value="15" />
+      </label>
+      <label>
+        Cols:
+        <input id="colsInput" type="number" min="5" max="41" step="2" value="15" />
+      </label>
+      <button id="regen">Regenerate</button>
+      <button id="solve" title="Auto-solve using BFS">Auto-solve</button>
+    </div>
+
+    <div class="game-area">
+      <canvas id="mazeCanvas"></canvas>
+
+      <aside class="info">
+        <p><strong>Controls:</strong> Arrow keys / WASD</p>
+        <p>Reach the green square to win.</p>
+        <div class="mobile-ctrls">
+          <button id="upBtn">▲</button>
+          <div class="row">
+            <button id="leftBtn">◀</button>
+            <button id="downBtn">▼</button>
+            <button id="rightBtn">▶</button>
+          </div>
+        </div>
+        <div id="status" class="status"></div>
+      </aside>
+    </div>
+
+    <footer class="footer">
+      <small>Maze generated with recursive backtracker • Player: yellow • Goal: green</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
